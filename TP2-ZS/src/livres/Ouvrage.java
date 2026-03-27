@@ -22,6 +22,7 @@ public class Ouvrage {
     public static final int LONGUEUR_TITRE_MIN = 3;
 
     private String titre = TITRE_INCONNU;
+    private Editeur editeur;
     private Auteur auteur = new Auteur();
     private LocalDate date;
     private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
@@ -34,6 +35,7 @@ public class Ouvrage {
         this.type = type;
         setDate(date);
         setNombreExemplaires(nombreExemplaires);
+
     }
     public Ouvrage(String titre, Auteur auteur,Format type) {
         this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT);
@@ -57,6 +59,14 @@ public class Ouvrage {
 
     public Auteur getAuteur() {
         return auteur;
+    }
+
+    public Editeur getEditeur() {
+        return editeur;
+    }
+
+    public void setEditeur(Editeur editeur) {
+        this.editeur = editeur;
     }
 
     private void setAuteur(Auteur auteur) {

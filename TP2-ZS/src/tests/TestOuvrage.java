@@ -1,8 +1,10 @@
 package tests;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
+import livres.Editeur;
 import livres.Ouvrage;
 import livres.Auteur;
 
