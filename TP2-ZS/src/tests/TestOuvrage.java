@@ -4,10 +4,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import livres.Editeur;
-import livres.Ouvrage;
-import livres.Auteur;
-import livres.Pays;
+import livres.*;
 
 /**
  * CoursPOO 1
@@ -21,8 +18,28 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.testSerie();
     }
 
+    private void testSerie() {
+
+        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAN"));
+
+        Serie maSerie = new Serie("Ma Série");
+        Ouvrage livre1 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+        Ouvrage livre2 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+        Ouvrage livre3 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+        Ouvrage roman = new Ouvrage("La carotte se prend le chou", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+        Ouvrage bandeDessinee = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+
+
+        maSerie.ajouterOuvrage(roman);
+        maSerie.ajouterOuvrage(livre1);
+        maSerie.ajouterOuvrage(livre2);
+        maSerie.ajouterOuvrage(livre3);
+        maSerie.ajouterOuvrage(bandeDessinee);
+        maSerie.retirerOuvrage(bandeDessinee);
+    }
 
     public void testOuvrages() {
         //Deux auteurs deja prets pour les tests...
@@ -104,7 +121,6 @@ public class TestOuvrage {
         resultat = bibliotheque.trouverOuvrages(new Auteur("Jacques", "Beaulieu", new Pays("France", "FRA")));
         System.out.println("Livres de Jacques: " + resultat);
     }
-
 
 }
 
