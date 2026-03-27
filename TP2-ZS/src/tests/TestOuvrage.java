@@ -21,6 +21,32 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.testPays();
+    }
+
+    public void testPays(){
+        Pays Belgique = new Pays("Belgique","BEL");
+        Pays France = new Pays("France","FRA");
+
+
+        //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
+        System.out.println("-----Test des constructeurs de Pays-----------");
+        System.out.println(Belgique);
+        System.out.println(France);
+
+
+        System.out.println("-----Test des constructeurs de Pays avec Code de pays invalide-----------");
+        Pays FranceA = new Pays("France","pomme");
+        System.out.println(FranceA);
+        Pays France2 = new Pays("France","2");
+        System.out.println(France2);
+
+
+
+        System.out.println("-----Test lier  Pays à un auteur-----------");
+        Auteur Francois = new Auteur("Francois", "Gentil", new Pays("Bulgarie","BUL"));
+        System.out.println(Francois);
+
     }
 
 
