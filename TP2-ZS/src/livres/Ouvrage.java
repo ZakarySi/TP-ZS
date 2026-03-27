@@ -10,7 +10,10 @@ import java.util.Objects;
  * @since H25
  */
 
-public class Ouvrage {
+abstract public class Ouvrage {
+
+    protected Ouvrage() {
+    }
 
     public enum Format {
         PAPIER, AUDIO, VIDEO
