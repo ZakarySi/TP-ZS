@@ -21,7 +21,38 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.testEditeur();
     }
+    public void testEditeur() {
+        // 1. Créer un auteur
+        Auteur auteur = new Auteur("Thomas", "Antoine",new Pays("France","FR"));
+
+        // 2. Créer un éditeur avec langues
+        Editeur editeur = new Editeur(
+                "Ulimwene",
+                Arrays.asList("Français", "Anglais")
+        );
+
+        // 3. Créer un ouvrage
+        Ouvrage ouvrage = new Ouvrage(
+                ": Le Petit Prince",
+                auteur,
+                Ouvrage.Format.PAPIER,
+                LocalDate.now(),
+                10
+        );
+
+        // 4. Lier l’éditeur à l’ouvrage
+        ouvrage.setEditeur(editeur);
+
+        // 5. Vérification
+        System.out.println(ouvrage);
+        System.out.println("Éditeur : " + ouvrage.getEditeur().getNom());
+        System.out.println("Langues : " + ouvrage.getEditeur().getLanguesPublication());
+
+    }
+
+
 
 
     public void testOuvrages() {
