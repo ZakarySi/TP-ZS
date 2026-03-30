@@ -4,12 +4,11 @@ import java.util.List;
 
 public class Editeur {
     private String nom;
-    private List<String> languesPublications;
+    private List<String> languesPublication;
 
     public Editeur(String nom, List<String> languesPublications) {
         this.nom = nom;
-        this.languesPublications = languesPublications;
-
+        this.languesPublication= languesPublications;
     }
 
     public String getNom() {
@@ -17,22 +16,16 @@ public class Editeur {
     }
 
     public List<String> getLanguesPublications() {
-        return languesPublications;
+        return languesPublication;
     }
 
     public void setNom(String nom) {
         this.nom = nom;
     }
 
-    public void setLanguesPublications(List<String> languesPublications) {
-        this.languesPublications = languesPublications;
+    public List<String> getLanguesPublication() {
+        return languesPublication;
     }
 
-    @Override
-    public String toString() {
-        return  "Editeur{" +
-                "nom='" + nom + '\'' +
-                ", languesPublications=" + languesPublications +
-                '}';
-    }
 }
+
