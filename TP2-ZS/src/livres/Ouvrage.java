@@ -23,6 +23,7 @@ public class Ouvrage {
 
     private String titre = TITRE_INCONNU;
     private Auteur auteur = new Auteur();
+    private Editeur editeur;
     private LocalDate date;
     private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
     private Format type = TYPE_DEFAULT;
