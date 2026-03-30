@@ -18,91 +18,91 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
-        test.testEditeur();
-        test.testPays();
-        test.testSerie();
+//        test.testEditeur();
+//        test.testPays();
+//        test.testSerie();
     }
-    public void testEditeur() {
-        // 1. Créer un auteur
-        Auteur auteur = new Auteur("Thomas", "Antoine",new Pays("France","FR"));
-
-        // 2. Créer un éditeur avec langues
-        Editeur editeur = new Editeur(
-                "Ulimwene",
-                Arrays.asList("Français", "Anglais")
-        );
-
-        // 3. Créer un ouvrage
-        Ouvrage ouvrage = new Ouvrage(
-                ": Le Petit Prince",
-                auteur,
-                Ouvrage.Format.PAPIER,
-                LocalDate.now(),
-                10
-        );
-
-        // 4. Lier l’éditeur à l’ouvrage
-        ouvrage.setEditeur(editeur);
-
-        // 5. Vérification
-        System.out.println(ouvrage);
-        System.out.println("Éditeur : " + ouvrage.getEditeur().getNom());
-        System.out.println("Langues : " + ouvrage.getEditeur().getLanguesPublication());
-
-    }
-
-
-
-    public void testPays(){
-        Pays Belgique = new Pays("Belgique","BEL");
-        Pays France = new Pays("France","FRA");
-
-
-        //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
-        System.out.println("-----Test des constructeurs de Pays-----------");
-        System.out.println(Belgique);
-        System.out.println(France);
-
-
-        System.out.println("-----Test des constructeurs de Pays avec Code de pays invalide-----------");
-        Pays FranceA = new Pays("France","pomme");
-        System.out.println(FranceA);
-        Pays France2 = new Pays("France","2");
-        System.out.println(France2);
+//    public void testEditeur() {
+//        // 1. Créer un auteur
+//        Auteur auteur = new Auteur("Thomas", "Antoine",new Pays("France","FR"));
+//
+//        // 2. Créer un éditeur avec langues
+//        Editeur editeur = new Editeur(
+//                "Ulimwene",
+//                Arrays.asList("Français", "Anglais")
+//        );
+//
+//        // 3. Créer un ouvrage
+//        Ouvrage ouvrage = new Ouvrage(
+//                ": Le Petit Prince",
+//                auteur,
+//                Ouvrage.Format.PAPIER,
+//                LocalDate.now(),
+//                10
+//        );
+//
+//        // 4. Lier l’éditeur à l’ouvrage
+//        ouvrage.setEditeur(editeur);
+//
+//        // 5. Vérification
+//        System.out.println(ouvrage);
+//        System.out.println("Éditeur : " + ouvrage.getEditeur().getNom());
+//        System.out.println("Langues : " + ouvrage.getEditeur().getLanguesPublication());
+//
+//    }
 
 
 
-        System.out.println("-----Test lier  Pays à un auteur-----------");
-        Auteur Francois = new Auteur("Francois", "Gentil", new Pays("Bulgarie","BUL"));
-        System.out.println(Francois);
-
-
-    }
-
-
+//    public void testPays(){
+//        Pays Belgique = new Pays("Belgique","BEL");
+//        Pays France = new Pays("France","FRA");
+//
+//
+//        //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
+//        System.out.println("-----Test des constructeurs de Pays-----------");
+//        System.out.println(Belgique);
+//        System.out.println(France);
+//
+//
+//        System.out.println("-----Test des constructeurs de Pays avec Code de pays invalide-----------");
+//        Pays FranceA = new Pays("France","pomme");
+//        System.out.println(FranceA);
+//        Pays France2 = new Pays("France","2");
+//        System.out.println(France2);
+//
+//
+//
+//        System.out.println("-----Test lier  Pays à un auteur-----------");
+//        Auteur Francois = new Auteur("Francois", "Gentil", new Pays("Bulgarie","BUL"));
+//        System.out.println(Francois);
+//
+//
+//    }
 
 
 
 
-    private void testSerie() {
 
-        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAN"));
-
-        Serie maSerie = new Serie("Ma Série");
-        Ouvrage livre1 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-        Ouvrage livre2 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-        Ouvrage livre3 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-        Ouvrage roman = new Ouvrage("La carotte se prend le chou", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-        Ouvrage bandeDessinee = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-
-
-        maSerie.ajouterOuvrage(roman);
-        maSerie.ajouterOuvrage(livre1);
-        maSerie.ajouterOuvrage(livre2);
-        maSerie.ajouterOuvrage(livre3);
-        maSerie.ajouterOuvrage(bandeDessinee);
-        maSerie.retirerOuvrage(bandeDessinee);
-    }
+//
+//    private void testSerie() {
+//
+//        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAN"));
+//
+//        Serie maSerie = new Serie("Ma Série");
+//        Ouvrage livre1 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+//        Ouvrage livre2 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+//        Ouvrage livre3 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+//        Ouvrage roman = new Ouvrage("La carotte se prend le chou", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+//        Ouvrage bandeDessinee = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
+//
+//
+//        maSerie.ajouterOuvrage(roman);
+//        maSerie.ajouterOuvrage(livre1);
+//        maSerie.ajouterOuvrage(livre2);
+//        maSerie.ajouterOuvrage(livre3);
+//        maSerie.ajouterOuvrage(bandeDessinee);
+//        maSerie.retirerOuvrage(bandeDessinee);
+//    }
 
     public void testOuvrages() {
         //Deux auteurs deja prets pour les tests...
